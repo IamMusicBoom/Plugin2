@@ -24,6 +24,7 @@
                 <action android:name="com.optima.plugin.host.ACTION_BROADCAST_RECEIVER"/>
             </intent-filter>
         </receiver>
+        <service android:name=".service.Plugin2ServiceTest"/>
     </application>
 
 </manifest>
