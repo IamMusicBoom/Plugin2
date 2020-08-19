@@ -25,6 +25,10 @@
             </intent-filter>
         </receiver>
         <service android:name=".service.Plugin2ServiceTest"/>
+        <provider
+            android:authorities="com.optima.plugin.plugin2"
+            android:name=".provider.Plugin2Provider"/>
+        <activity android:name=".activity.ProviderTestActivity"/>
     </application>
 
 </manifest>
