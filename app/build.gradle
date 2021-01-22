@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -23,6 +24,12 @@ android {
             }
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 // 这个plugin需要放在android配置之后，因为需要读取android中的配置项
 apply plugin: 'replugin-plugin-gradle'
@@ -38,7 +45,9 @@ repluginPluginConfig {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.3'
+    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.4'
     implementation project(path: ':repluginlib')
+//    implementation 'org.webrtc:google-webrtc:1.0.32006'
+
 
 }
